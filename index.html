@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>🪨 Rock · Paper · ✂️ Scissors</h1>
+            <p class="subtitle">Classic CLI game — now also playable in your browser.</p>
+            <div class="hero-actions">
+                <a href="#install" class="btn btn-outline">Install Guide</a>
+                <a href="#play" class="btn btn-primary">Play Now</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="install" class="section">
+        <div class="container">
+            <h2>📦 How to Install &amp; Run</h2>
+            <p>Clone the repo and run the Python script — zero dependencies required.</p>
+
+            <div class="code-block">
+                <div class="code-header">
+                    <span>Terminal</span>
+                    <button class="copy-btn" data-cmd="clone">Copy</button>
+                </div>
+                <pre><code id="cmd-clone">git clone https://github.com/Chenboda01/Rock-paper-scissors.git</code></pre>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header">
+                    <span>Terminal</span>
+                    <button class="copy-btn" data-cmd="cd">Copy</button>
+                </div>
+                <pre><code id="cmd-cd">cd Rock-paper-scissors</code></pre>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header">
+                    <span>Terminal</span>
+                    <button class="copy-btn" data-cmd="run">Copy</button>
+                </div>
+                <pre><code id="cmd-run">python rock-paper-scissor.py</code></pre>
+            </div>
+
+            <div class="info-card">
+                <h3>🎮 How to Play</h3>
+                <ul>
+                    <li>Type <kbd>r</kbd> for <strong>rock</strong>, <kbd>p</kbd> for <strong>paper</strong>, <kbd>s</kbd> for <strong>scissors</strong>.</li>
+                    <li>Press <strong>Enter</strong> to throw your hand.</li>
+                    <li>Type <kbd>y</kbd> to play again or <kbd>n</kbd> to quit.</li>
+                    <li>Rock beats scissors, scissors beats paper, paper beats rock.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="play" class="section section-dark">
+        <div class="container">
+            <h2>🎯 Play Online</h2>
+            <p>No installation needed. Click your move below.</p>
+
+            <div class="game-container">
+                <div class="scoreboard">
+                    <div class="score">
+                        <span class="score-label">You</span>
+                        <span id="player-score" class="score-value">0</span>
+                    </div>
+                    <div class="score-divider">:</div>
+                    <div class="score">
+                        <span class="score-label">Computer</span>
+                        <span id="computer-score" class="score-value">0</span>
+                    </div>
+                </div>
+
+                <div class="result-display" id="result-display">
+                    <div class="choice-box">
+                        <span class="choice-label">You chose</span>
+                        <div class="choice-icon" id="player-choice-icon">—</div>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="choice-box">
+                        <span class="choice-label">Computer chose</span>
+                        <div class="choice-icon" id="computer-choice-icon">—</div>
+                    </div>
+                </div>
+
+                <div class="outcome" id="outcome">Make your move!</div>
+
+                <div class="moves">
+                    <button class="move-btn" data-move="r" aria-label="Rock">
+                        <span class="move-emoji">🪨</span>
+                        <span class="move-name">Rock</span>
+                    </button>
+                    <button class="move-btn" data-move="p" aria-label="Paper">
+                        <span class="move-emoji">📄</span>
+                        <span class="move-name">Paper</span>
+                    </button>
+                    <button class="move-btn" data-move="s" aria-label="Scissors">
+                        <span class="move-emoji">✂️</span>
+                        <span class="move-name">Scissors</span>
+                    </button>
+                </div>
+
+                <button class="reset-btn" id="reset-btn">Reset Score</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p><a href="https://github.com/Chenboda01/Rock-paper-scissors" target="_blank">GitHub</a> · MIT License</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
